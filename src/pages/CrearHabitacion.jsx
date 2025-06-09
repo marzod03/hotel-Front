@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import { FaArrowLeft } from "react-icons/fa";
-import "../assets/CrearHabitacion.css";
+import "../assets/crearHabitacion.css";
 import.meta.env.VITE_API_URL;
 const API_URL = import.meta.env.VITE_API_URL;
 
