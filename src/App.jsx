@@ -14,7 +14,7 @@ import Restaurante from './pages/Restaurante';
 import "react-datepicker/dist/react-datepicker.css";
 import NuevaPromocion from "./pages/NuevaPromocion";
 import Carrito from './pages/carrito'; 
-import Disponibilidad from "./pages/DisponibilidadTEEEE";
+import Disponibilidad from "./pages/Disponibilidad";
 import AdminRegister from "./pages/AdminRegister";
 
 function App() {
