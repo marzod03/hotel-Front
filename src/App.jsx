@@ -14,7 +14,7 @@ import Restaurante from './pages/Restaurante';
 import "react-datepicker/dist/react-datepicker.css";
 import NuevaPromocion from "./pages/NuevaPromocion";
 import Carrito from './pages/carrito'; 
-import Disponibilidad from "./pages/Disponibilidad";
+import Disponibilidad from "./pages/DisponibilidadTEEEE";
 import AdminRegister from "./pages/AdminRegister";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         <Route path="/restaurante" element={<Restaurante />} />
         <Route path="/admin/habitaciones/:id/promociones" element={<NuevaPromocion />} />
         <Route path="/carrito" element={<Carrito />} />
-        <Route path="/Disponibilidad" element={<Disponibilidad />} />
+        <Route path="/disponibilidad" element={<Disponibilidad />} />
         <Route path="/admin/register" element={<AdminRegister />} />
 
       </Routes>
