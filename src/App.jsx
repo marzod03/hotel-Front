@@ -36,7 +36,7 @@ function App() {
         <Route path="/restaurante" element={<Restaurante />} />
         <Route path="/admin/habitaciones/:id/promociones" element={<NuevaPromocion />} />
         <Route path="/carrito" element={<Carrito />} />
-        <Route path="/disponibilidad" element={<Disponibilidad />} />
+        <Route path="/Disponibilidad" element={<Disponibilidad />} />
         <Route path="/admin/register" element={<AdminRegister />} />
 
       </Routes>
