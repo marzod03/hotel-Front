@@ -175,7 +175,7 @@ useEffect(() => {
               <h1 className="display-3 text-white">Gastronomía Excepcional</h1>
               <p className="lead">Descubre nuestra exquisita oferta culinaria local</p>
               <Button className="custom-btn" variant="danger" size="lg" onClick={() => navigate("/restaurante")}>
-                Ver Carta
+                Reservar Mesa
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
