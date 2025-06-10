@@ -238,8 +238,11 @@ footer p {
 
 /* Estilos adicionales para el Panel de Administración */
 .admin-dashboard {
-  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden; /* previene scroll horizontal feo en móviles */
+  background-color: #f5f7fa;
   padding-bottom: 2rem;
 }
 
@@ -559,10 +562,4 @@ footer p {
   }
 }
 
-.admin-dashboard {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
-  background-color: #f9f9f9;
-}
+
