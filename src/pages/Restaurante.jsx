@@ -48,7 +48,7 @@ const Restaurante = () => {
     e.preventDefault();
     if (horario && personas > 0 && nombre.trim()) {
       setReservaConfirmada(true);
-      setTimeout(() => setReservaConfirmada(false), 5000);
+      setTimeout(() => setReservaConfirmada(false), 100000);
     }
   };
 
