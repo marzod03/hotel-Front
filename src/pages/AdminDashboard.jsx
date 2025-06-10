@@ -237,7 +237,7 @@ useEffect(() => {
           <td>{formatearFecha(reserva.fechaSalida)}</td>
           <td>{renderEstado(reserva.status)}</td>
           <td className="text-center">
-            <div className="d-flex justify-content-center gap-2">
+            <div className="d-flex flex-wrap justify-content-center gap-2">
               <Button
                 variant="primary"
                 size="sm"
