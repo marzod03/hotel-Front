@@ -133,13 +133,14 @@ const EditarReserva = () => {
               <input
                 type="text"
                 value={
-                  reserva.habitaciones && reserva.habitaciones.length > 0
-                    ? reserva.habitaciones.map(h => h.habitacion.nombre).join(", ")
+                  reserva.reservahabitacion && reserva.reservahabitacion.length > 0
+                    ? reserva.reservahabitacion.map(rh => rh.habitacion.nombre).join(", ")
                     : reserva.tipoHabitacion || "N/A"
                 }
                 disabled
                 className="form-control"
               />
+
             </div>
 
             <div className="mb-3">
