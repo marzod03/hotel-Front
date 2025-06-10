@@ -20,19 +20,28 @@ const AdminReservas = () => {
     }
   };
 
-  const cambiarEstado = async (id, nuevoEstado) => {
-    try {
-      await axios.put(
-        `${API_URL}/api/reservas/${id}`,
-        { status: nuevoEstado },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      Swal.fire("Actualizado", "El estado fue cambiado", "success");
-      obtenerReservas();
-    } catch (error) {
-      Swal.fire("Error", "No se pudo cambiar el estado", "error");
-    }
-  };
+  const cambiarEstado = async (reserva, nuevoEstado) => {
+  try {
+    await axios.put(
+      `${API_URL}/api/reservas/${reserva.id}`,
+      {
+        status: nuevoEstado,
+        fechaEntrada: reserva.fechaEntrada,
+        fechaSalida: reserva.fechaSalida,
+        nombre: reserva.cliente?.nombre || "",
+        apellido: reserva.cliente?.apellido || "",
+        telefono: reserva.cliente?.telefono || "",
+        email: reserva.cliente?.email || ""
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    Swal.fire("Actualizado", "El estado fue cambiado", "success");
+    obtenerReservas();
+  } catch (error) {
+    Swal.fire("Error", "No se pudo cambiar el estado", "error");
+    console.error(error);
+  }
+};
 
   const eliminarReserva = async (id) => {
     const confirm = await Swal.fire({
@@ -74,16 +83,17 @@ const AdminReservas = () => {
             <div className="mt-2">
               <button
                 className="btn btn-sm btn-outline-success me-2"
-                onClick={() => cambiarEstado(reserva.id, "confirmada")}
+                onClick={() => cambiarEstado(reserva, "confirmada")}
               >
                 Confirmar
               </button>
               <button
                 className="btn btn-sm btn-outline-warning me-2"
-                onClick={() => cambiarEstado(reserva.id, "cancelada")}
+                onClick={() => cambiarEstado(reserva, "cancelada")}
               >
                 Cancelar
               </button>
+
               <button
                 className="btn btn-sm btn-outline-danger"
                 onClick={() => eliminarReserva(reserva.id)}
